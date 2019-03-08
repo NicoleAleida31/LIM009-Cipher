@@ -5,18 +5,15 @@ const result = document.getElementById ("result");
 const btnCifrar = document.getElementById("btnCifrar");
 const btnDescifrar = document.getElementById("btnDescifrar");
 btnCifrar.addEventListener("click",()=>{
-    let texto= firstData.value;
-    let llave = offset.value; 
-    let resultado =cipher.encode(texto,llave);
+    
+    let resultado =cipher.encode(firstData.value,parseInt(offset.value));
   result.value=resultado;
 
 });
 
 
 btnDescifrar.addEventListener("click",()=>{
-    let texto= firstData.value;
-    let llave = offset.value; 
-    let resultado =cipher.decode(texto,llave);
+    let resultado =cipher.decode(firstData.value,parseInt(offset.value));
   result.value=resultado;
 
 });

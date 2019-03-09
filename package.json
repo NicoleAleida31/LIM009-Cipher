@@ -9,13 +9,13 @@
     "pretest": "npm run eslint && npm run htmlhint",
     "test-browser": "opener ./test/index.html",
     "test-node": "nyc mocha ./test/headless.js",
-    "test": "npm run test-node && npm run test-browser"
+    "test": "mocha"
   },
   "dependencies": {
-    "chai": "^4.1.2",
+    "chai": "^4.2.0",
     "eslint": "^5.9.0",
     "htmlhint": "^0.10.1",
-    "mocha": "^5.1.1",
+    "mocha": "^5.2.0",
     "nyc": "^13.1.0",
     "opener": "^1.4.3"
   }

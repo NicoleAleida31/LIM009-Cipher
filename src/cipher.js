@@ -8,7 +8,7 @@ window.cipher = {
      resultado+=String.fromCharCode((palabra-65+offset)%26+65);     
 }
 else if (palabra>=48 && palabra<=57) {
-  resultado+=String.fromCharCode((palabra-57-offset)%10+57);     
+  resultado+=String.fromCharCode((palabra-57+offset)%10+57);     
 }
 else if (palabra>=97 && palabra<=122){
 resultado+=String.fromCharCode((palabra-97+offset)%26+97);

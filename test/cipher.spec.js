@@ -17,7 +17,7 @@ describe('cipher', () => {
         assert.equal(cipher.encode('012345',33),'345678');
      });
      it('debería retornar hij para abc con offset 33',()=>{
-      assert.equal(cipher.encode('abc',33),'hij');
+      assert.equal(cipher.encode('a bc',33),'h ij');
    });
     });
   
@@ -31,10 +31,10 @@ describe('cipher', () => {
         assert.equal(cipher.decode("HIJKLMNOPQRSTUVWXYZABCDEFG",33),"ABCDEFGHIJKLMNOPQRSTUVWXYZ");
       });
       it('debería retornar 012345 para 345678 con offset 33',()=>{
-        assert.equal(cipher.encode('345678',33),'012345');
+        assert.equal(cipher.decode('345678',33),'012345');
      });
      it('debería retornar abc para hij con offset 33',()=>{
-      assert.equal(cipher.encode('hij',33),'abc');
+      assert.equal(cipher.decode('hi j',33),'ab c');
    });
     });
   

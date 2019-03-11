@@ -1,53 +1,44 @@
 window.cipher = {
   encode: (texto,offset) => {
     let resultado= ""; 
-   function formula (x,llave,unicode) { //metodo retorno a  
-    //(x-unicode+llave)%26+unicode
-    let ascci= (x-unicode+llave)%26+unicode;
-    let r=String.fromCharCode(ascci);
-    return r;
-   }
    for (let i =0;i<texto.length; i++) {
      let palabra= texto.charCodeAt(i);
   /*  codigo >=32 pero menor o igual 64 */
     if (palabra>=65 && palabra<=90) {
-     resultado+=formula(palabra,offset,65);     
+     resultado+=String.fromCharCode((palabra-65+offset)%26+65);     
+}
+else if (palabra>=48 && palabra<=57) {
+  resultado+=String.fromCharCode((palabra-57-offset)%10+57);     
 }
 else if (palabra>=97 && palabra<=122){
-resultado+=formula(palabra,offset,97);
+resultado+=String.fromCharCode((palabra-97+offset)%26+97);
 }
 else {
   resultado+=String.fromCharCode(palabra);
 }
-
-  console.log(resultado); /* Acá va tu código */
   }
   
  return resultado;
   },
 
   decode: (texto,offset) => {
-    let resultado= ""; 
-    function formula (x,llave,unicode) { //metodo retorno a  
-     //(x-unicode+llave)%26+unicode
-     let ascci= (x-unicode-25-llave)%26+unicode;
-     let r=String.fromCharCode(ascci);
-     return r;
-    }
+    let resultado= "";
     for (let i =0;i<texto.length; i++) {
       let palabra= texto.charCodeAt(i);
    /*  codigo >=32 pero menor o igual 64 */
      if (palabra>=65 && palabra<=90) {
-      resultado+=formula(palabra,offset,65);     
+      resultado+=String.fromCharCode((palabra-90-offset)%26+90);     
  }
- else if (palabra>=97 && palabra<=122){
- resultado+=formula(palabra,offset,97);
+ else if (palabra>=48 && palabra<=57) {
+  resultado+=String.fromCharCode((palabra-57-offset)%10+57);     
+}
+     else if (palabra>=97 && palabra<=122){
+      resultado+=String.fromCharCode((palabra-122-offset)%26+122);
  }
  else {
    resultado+=String.fromCharCode(palabra);
  }
-   
-   
-    }
+  }
+  return resultado;
   }
 }

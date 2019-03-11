@@ -3,17 +3,31 @@
   <head>
     <meta charset="utf-8">
     <title>Caesar Cipher</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Petit+Formal+Script" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Handlee" rel="stylesheet">
+    
     
   </head>
   <body>
-  <h1>Caesar Cipher</h1> 
-  <p>Ingresa la información</p>
-  <input type="text" class="firstData" name="firstData" id="firstData" >
-  <input type="number" class="offset" name="offset" id="offset">
-  <button id="btnCifrar">Cifrar</button>
-  <button id="btnDescifrar">Descifrar</button>
-  <input type="text" class="result" name="result" id="result">
+
+<div id="titulo">
+        <h1 class="titulo">Caesar Cipher</h1> 
+</div>
+<div id="info">
+  <h2 class="tituloh2">¡Escribe tu mensaje de amor y compártelo!</h2>
+</div>
+<div id="container">
+    <h2 id="subtitle">Ingresa tu mensaje </h2>
+  
+  
+  <input type="text" class="firstData" name="firstData" id="firstData" placeholder="Escribe tu amoroso mensaje">
+  
+  <input type="number" class="offset" name="offset" id="offset" placeholder="número">
+  <button id="btnDescifrar">descifrar</button> <button id="btnCifrar">cifrar</button>
+  <input type="text" class="result" name="result" id="result" placeholder="Resultado">
+</div>
     <script src="cipher.js"></script>
     <script src="index.js"></script>
   </body>

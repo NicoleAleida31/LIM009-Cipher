@@ -1,10 +1,145 @@
-
+*{
+    margin:0;
+    padding: 0;
+}
 body {
-    background-image: url(imagenes/unicef3.png);
+
+    background-image : url("https://www.alwinjolliffe.com/wp-content/uploads/2017/03/God-Loves-You_animator.gif");
     background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-position : center center;
+    background-repeat : no-repeat;
+    background-attachment : fixed;
+    text-align : center;
+    font-family : "Petit Formal Script", cursive;
+    overflow: hidden;
+}
+
+#titulo{
+    width:  100%;
+    height: 75px;
+    margin: 10px;
+    font-size: 30px;  
+
+}
+#info {
+    width:  100%;
+    height: 70px;
+    margin: 10px;
+    font-size: 20px;
+
+}
+#container{
+    width: 700px;
+    height: 500px;
+    margin: auto;
     text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
+    padding-top: 2%;
+    background-color: whitesmoke;
+  }
+  #subtitle{
+ margin-bottom: 11%;
+  }
+  
+  .firstData{
+    width: 60%;
+    height: 17%;
+    margin: 17px;
+    text-align: center;
+    border-radius: 5px;
+    font-family: 'Handlee', cursive;
+    font-size: 23px;
+ }
+ .info{
+    width: 60%;
+    height: 17%;
+    margin: 17px;
+    text-align: center;
+    border-radius: 5px;
+    font-family: 'Handlee', cursive;
+    font-size: 23px;
+ }
+ .offset{
+    width: 22%;
+    height: 17%;
+    margin: 17px;
+    text-align: center;
+    border-radius: 5px;
+    font-family: 'Handlee';
+    font-size: 20px;
+ }
+ .result{
+    width: 60%;
+    height: 17%;
+    margin: 17px;
+    border-radius: 5px;
+    text-align: center;
+    font-family: 'Handlee', cursive;
+    font-size: 23px;
+ }
+
+ #btnCifrar{
+    float: center;
+    display: -moz-grid-line ;
+    padding: 7px;
+    font-weight: 590;
+    color: white;
+    background-color: lightcoral;
+    border-radius: 5px;
+    border: 3px solid coral;
+    font-family: "Handlee";
+    font-size: 22px;
+ }
+ #btnDescifrar{
+    display: -ms-inline-grid;
+    padding: 7px;
+    font-weight: 590;
+    color: white;
+    background-color: lightcoral;
+    border-radius: 5px;
+    border: 3px solid coral;
+    font-family: "Handlee";
+    font-size: 22px;
+ }
+
+ @media screen and (max-width:800px){
+    body{
+     background-image: url("https://media1.tenor.com/images/55c01d04619c94818a4f0eb033392556/tenor.gif");
+     background-size: cover;
+     background-position : center;
+     background-repeat : no-repeat;
+     background-attachment : fixed;
+     text-align : center;
+     font-family : "Petit Formal Script", cursive;
+     overflow: hidden;
+     padding-top: 100px;
+    }
+}
+
+@media screen and (max-width:450px){
+    body{
+     background-image: url("https://media1.tenor.com/images/08f6f59365bb3ad890431cebc6d51016/tenor.gif");
+     background-size: cover;
+     background-position : center;
+     background-repeat : no-repeat;
+     background-attachment : fixed;
+     text-align : center;
+     font-family : "Petit Formal Script", cursive;
+     overflow: hidden;
+     padding-top: 100px;
+    }
+
+    .titulo{
+        font-size:48px
+    }
+    #container {
+     width: 100%;
+     background-color: rgba(240,240,240, 0.8);
+    }
+
+    .firstData ,.offset,.result{
+        height: 10%;
+    }
+    .tituloh2 {
+        font-size: 20px;
+    }
 }
